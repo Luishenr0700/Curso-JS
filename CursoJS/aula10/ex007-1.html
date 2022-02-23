@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samando...</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Samando Valores:</h1>
+    <input type="number" id="num1"> +
+    <input type="number" id="num2">
+    <input type="button" value="Soma" id="botao" onclick="soma()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="res">Resultado</div>
+    <script>
+        function soma(){
+            var nume1 = window.document.getElementById('num1')
+            var nume2 = window.document.getElementById('num2')
+            var result = window.document.getElementById('res')
+            var n1 = Number(nume1.value)
+            var n2 = Number(nume2.value)
+            var s = n1 + n2
+            result.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>.`
+        }
+        function entrar(){
+            var cor = window.document.getElementById('botao')
+            cor.style.color = 'red'
+        }
+        function sair(){
+            var cor = document.getElementById('botao')
+            cor.style.color = ''
+        }
+    </script>
+</body>
+</html>
